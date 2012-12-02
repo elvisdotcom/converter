@@ -30,4 +30,9 @@ public class StringToDateSqlConverter extends StringNotBlankConverter<Date> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Date> toClass() {
+        return Date.class;
+    }
 }

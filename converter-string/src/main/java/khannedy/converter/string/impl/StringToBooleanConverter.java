@@ -12,4 +12,9 @@ public class StringToBooleanConverter extends StringNotBlankConverter<Boolean> {
     public Boolean doConvert(String value) throws ConverterException {
         return Boolean.parseBoolean(value);
     }
+
+    @Override
+    public Class<Boolean> toClass() {
+        return Boolean.class;
+    }
 }

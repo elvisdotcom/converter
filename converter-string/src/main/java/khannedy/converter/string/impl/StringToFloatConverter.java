@@ -16,4 +16,9 @@ public class StringToFloatConverter extends StringNotBlankConverter<Float> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Float> toClass() {
+        return Float.class;
+    }
 }

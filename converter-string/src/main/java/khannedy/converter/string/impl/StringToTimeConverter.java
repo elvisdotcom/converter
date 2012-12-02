@@ -30,4 +30,9 @@ public class StringToTimeConverter extends StringNotBlankConverter<Time> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Time> toClass() {
+        return Time.class;
+    }
 }

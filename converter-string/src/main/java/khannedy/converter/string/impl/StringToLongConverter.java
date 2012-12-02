@@ -16,4 +16,9 @@ public class StringToLongConverter extends StringNotBlankConverter<Long> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Long> toClass() {
+        return Long.class;
+    }
 }

@@ -12,4 +12,9 @@ public class StringToCharacterConverter extends StringNotBlankConverter<Characte
     public Character doConvert(String value) throws ConverterException {
         return Character.valueOf(value.charAt(0));
     }
+
+    @Override
+    public Class<Character> toClass() {
+        return Character.class;
+    }
 }

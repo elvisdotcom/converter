@@ -16,4 +16,9 @@ public class StringToShortConverter extends StringNotBlankConverter<Short> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Short> toClass() {
+        return Short.class;
+    }
 }

@@ -18,4 +18,9 @@ public class StringToBigIntegerConverter extends StringNotBlankConverter<BigInte
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<BigInteger> toClass() {
+        return BigInteger.class;
+    }
 }

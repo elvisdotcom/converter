@@ -16,4 +16,9 @@ public class StringToDoubleConverter extends StringNotBlankConverter<Double> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Double> toClass() {
+        return Double.class;
+    }
 }

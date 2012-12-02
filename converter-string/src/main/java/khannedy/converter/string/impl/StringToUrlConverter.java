@@ -23,4 +23,9 @@ public class StringToUrlConverter extends StringNotBlankConverter<URL> {
             throw new ConverterException(e);
         }
     }
+
+    @Override
+    public Class<URL> toClass() {
+        return URL.class;
+    }
 }

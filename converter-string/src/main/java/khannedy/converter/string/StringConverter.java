@@ -7,4 +7,8 @@ import khannedy.converter.api.Converter;
  */
 public abstract class StringConverter<T> implements Converter<String, T> {
 
+    @Override
+    public Class<String> fromClass() {
+        return String.class;
+    }
 }

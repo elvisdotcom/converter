@@ -30,4 +30,9 @@ public class StringToTimestampConverter extends StringNotBlankConverter<Timestam
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Timestamp> toClass() {
+        return Timestamp.class;
+    }
 }

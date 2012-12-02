@@ -16,4 +16,9 @@ public class StringToByteConverter extends StringNotBlankConverter<Byte> {
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<Byte> toClass() {
+        return Byte.class;
+    }
 }

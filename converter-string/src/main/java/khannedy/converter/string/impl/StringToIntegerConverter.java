@@ -7,6 +7,7 @@ import khannedy.converter.string.StringNotBlankConverter;
  * @author Eko Kurniawan Khannedy
  */
 public class StringToIntegerConverter extends StringNotBlankConverter<Integer> {
+
     @Override
     public Integer doConvert(String value) throws ConverterException {
         try {
@@ -14,5 +15,10 @@ public class StringToIntegerConverter extends StringNotBlankConverter<Integer> {
         } catch (NumberFormatException ex) {
             throw new ConverterException(ex);
         }
+    }
+
+    @Override
+    public Class<Integer> toClass() {
+        return Integer.class;
     }
 }

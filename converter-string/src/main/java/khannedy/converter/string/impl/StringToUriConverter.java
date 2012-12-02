@@ -19,4 +19,9 @@ public class StringToUriConverter extends StringNotBlankConverter<URI> {
             throw new ConverterException(e);
         }
     }
+
+    @Override
+    public Class<URI> toClass() {
+        return URI.class;
+    }
 }

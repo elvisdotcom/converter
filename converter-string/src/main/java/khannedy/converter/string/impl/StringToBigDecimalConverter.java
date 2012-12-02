@@ -18,4 +18,9 @@ public class StringToBigDecimalConverter extends StringNotBlankConverter<BigDeci
             throw new ConverterException(ex);
         }
     }
+
+    @Override
+    public Class<BigDecimal> toClass() {
+        return BigDecimal.class;
+    }
 }
