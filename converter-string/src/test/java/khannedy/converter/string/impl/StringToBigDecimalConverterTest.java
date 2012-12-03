@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 /**
  * @author Eko Kurniawan Khannedy
  */
-public class StringToBigDecimalConverterTest {
+public class StringToBigDecimalConverterTest extends Assert {
 
     private Logger logger = Logger.getLogger(StringToBigDecimalConverter.class.getName());
 
@@ -19,7 +19,7 @@ public class StringToBigDecimalConverterTest {
         logger.info("test StringToBigDecimalConverter.toClass()");
 
         StringToBigDecimalConverter converter = new StringToBigDecimalConverter();
-        Assert.assertEquals(converter.toClass(), BigDecimal.class);
+        assertEquals(converter.toClass(), BigDecimal.class);
     }
 
     @Test
@@ -29,11 +29,11 @@ public class StringToBigDecimalConverterTest {
         StringToBigDecimalConverter converter = new StringToBigDecimalConverter();
         BigDecimal convert = converter.convert("100000");
 
-        Assert.assertNotNull(convert);
+        assertNotNull(convert);
 
         try {
             converter.convert("wrong value");
-            Assert.fail();
+            fail();
         } catch (ConverterException ex) {
             //success
         }

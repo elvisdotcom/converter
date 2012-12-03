@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * @author Eko Kurniawan Khannedy
  */
-public class StringConverterTest {
+public class StringConverterTest extends Assert {
 
     private Logger logger = Logger.getLogger(StringConverterTest.class.getName());
 
@@ -29,7 +29,7 @@ public class StringConverterTest {
             }
         };
 
-        Assert.assertEquals(converter.fromClass(), String.class);
+        assertEquals(converter.fromClass(), String.class);
     }
 
 }

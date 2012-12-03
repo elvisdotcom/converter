@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * @author Eko Kurniawan Khannedy
  */
-public class StringNotBlankConverterTest {
+public class StringNotBlankConverterTest extends Assert {
 
     private Logger logger = Logger.getLogger(StringNotBlankConverterTest.class.getName());
 
@@ -32,21 +32,21 @@ public class StringNotBlankConverterTest {
 
         try {
             converter.convert(null);
-            Assert.fail("StringNotBlankConverter must not accept null value");
+            fail("StringNotBlankConverter must not accept null value");
         } catch (ConverterException ex) {
             // success
         }
 
         try {
             converter.convert("");
-            Assert.fail("StringNotBlankConverter must not accept empty string");
+            fail("StringNotBlankConverter must not accept empty string");
         } catch (ConverterException ex) {
             // success
         }
 
         try {
             converter.convert("      ");
-            Assert.fail("StringNotBlankConverter must not accept blank string");
+            fail("StringNotBlankConverter must not accept blank string");
         } catch (ConverterException ex) {
             // success
         }
