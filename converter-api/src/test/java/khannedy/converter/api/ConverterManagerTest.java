@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 /**
  * @author Eko Kurniawan Khannedy
  */
-public class ConverterManagerTest {
+public class ConverterManagerTest extends Assert {
 
     private Logger logger = Logger.getLogger(ConverterManagerTest.class.getName());
 
@@ -28,7 +28,7 @@ public class ConverterManagerTest {
         manager.register(new SimpleConverter());
 
         Converter<String, Integer> converter = manager.get(String.class, Integer.class);
-        Assert.assertNotNull(converter);
+        assertNotNull(converter);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ConverterManagerTest {
         manager.register(new SimpleConverter());
 
         Integer data = manager.convert(String.class, Integer.class, "100");
-        Assert.assertEquals(data, new Integer(100));
+        assertEquals(data, new Integer(100));
     }
 
 }
