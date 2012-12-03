@@ -29,5 +29,8 @@ final public class StringConverters {
         manager.register(new StringToTimestampConverter());
         manager.register(new StringToUriConverter());
         manager.register(new StringToUrlConverter());
+        manager.register(new StringToFileConverter());
+        manager.register(new StringToPathConverter());
+        manager.register(new StringToObjectConverter());
     }
 }
