@@ -50,6 +50,9 @@ public class StringNotBlankConverterTest extends Assert {
         } catch (ConverterException ex) {
             // success
         }
+
+        Integer value = converter.convert("100");
+        assertEquals(value, new Integer(100));
     }
 
 }
